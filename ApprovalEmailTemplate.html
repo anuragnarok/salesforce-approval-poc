@@ -1,0 +1,33 @@
+<messaging:emailTemplate subject="Approval Request for {!relatedTo.Name}" recipientType="User" relatedToType="Account">
+    <messaging:htmlEmailBody >
+        <html>
+            <head>
+                <style>
+                    .button {
+                        background-color: #28a745;
+                        color: white;
+                        padding: 10px 20px;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        display: inline-block;
+                        margin: 10px;
+                    }
+                    .reject {
+                        background-color: #dc3545;
+                    }
+                </style>
+            </head>
+            <body>
+                <p>Dear Approver,</p>
+                <p>An approval request has been submitted for the account <strong>{!relatedTo.Name}</strong>.</p>
+                <p>Please review the account and choose your action by clicking one of the buttons below:</p>
+                
+                <a class="button" href="https://bitorder7-dev-ed.develop.my.site.com/approval?recordId={!relatedTo.Id}&action=Approve">Approve</a>
+                <a class="button reject" href="https://bitorder7-dev-ed.develop.my.site.com/approval?recordId={!relatedTo.Id}&action=Reject">Reject</a>
+
+                <p>Thank you,</p>
+                <p>Your Company Name</p>
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

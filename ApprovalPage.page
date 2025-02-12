@@ -1,0 +1,12 @@
+<apex:page controller="ApprovalController" action="{!processApprovalAction}">
+    <apex:outputPanel id="result">
+        <apex:outputText value="Approval action has been processed successfully!" />
+    </apex:outputPanel>
+    
+    <script>
+        // Auto-close the page after 3 seconds
+        setTimeout(function() {
+            window.close();
+        }, 3000);
+    </script>
+</apex:page>

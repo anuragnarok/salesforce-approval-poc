@@ -1,0 +1,12 @@
+# Ignore SFDX specific files
+.sfdx/
+testresults/
+node_modules/
+*.log
+
+# Ignore VS Code settings
+.vscode/
+.DS_Store
+
+# Ignore system files
+Thumbs.db
